@@ -15,8 +15,6 @@ for F in ~/.bash/[0-9][0-9]-*.sh; do
 done
 
 # run site-specific stuff in .site-bashrc
-if [[ -r $HOME/.${HOSTNAME}-bashrc ]]; then
-    source $HOME/.${HOSTNAME}-bashrc
-fi
+[[ -r $HOME/.${HOSTNAME}-bashrc ]] && source $HOME/.${HOSTNAME}-bashrc
 
 # vim:set foldenable foldmethod=marker filetype=sh tabstop=4 expandtab:
