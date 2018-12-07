@@ -17,4 +17,7 @@ done
 # run site-specific stuff in .site-bashrc
 [[ -r $HOME/.${HOSTNAME}-bashrc ]] && source $HOME/.${HOSTNAME}-bashrc
 
+# Disable flow control so that Ctrl-S doesn't lock up the terminal
+stty -ixon
+
 # vim:set foldenable foldmethod=marker filetype=sh tabstop=4 expandtab:
