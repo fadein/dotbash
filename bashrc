@@ -20,4 +20,8 @@ done
 # Disable flow control so that Ctrl-S doesn't lock up the terminal
 stty -ixon
 
+# Launch the SSH agent using my customizations
+# This line works if the directory containing this script is in $PATH
+source ssh-agent-startup.sh
+
 # vim:set foldenable foldmethod=marker filetype=sh tabstop=4 expandtab:
