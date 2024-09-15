@@ -58,7 +58,7 @@ esac
 D_WHITE='\[\e[0;37m\]'
 RESET='\[\e[0;0m\]'
 V="${BASH_VERSINFO[0]}.${BASH_VERSINFO[1]}.${BASH_VERSINFO[2]}"
-PROMPT1="$D_WHITE${V} [%\j ${USERCOLOR}\u${D_WHITE}@${HOSTCOLOR}\h${D_WHITE} \w]\\\$$RESET "
+PROMPT1="$D_WHITE${V} %\j ${USERCOLOR}\u${D_WHITE}@${HOSTCOLOR}\h${D_WHITE} \w\\\$$RESET "
 
 case $TERM in
     *xterm*|rxvt)
