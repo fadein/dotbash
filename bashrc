@@ -25,3 +25,6 @@ stty -ixon
 source ssh-agent-startup.sh
 
 # vim:set foldenable foldmethod=marker filetype=sh tabstop=4 expandtab:
+
+[[ -n "$_TUTR" ]] && source $_TUTR || true  # shell tutorial shim DO NOT MODIFY
+
