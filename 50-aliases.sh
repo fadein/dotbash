@@ -1,74 +1,148 @@
-## because I can't spell...
+# vim:set foldenable foldmethod=marker filetype=sh tabstop=4 expandtab:
+
+#
+# User-specific aliases
+#
+alias clipi="xclip -sel clip -i"
+alias clipin="xclip -sel clip -i"
+alias clipo="xclip -sel clip -o"
+alias clipout="xclip -sel clip -o"
+alias cp='cp -i'
+alias csi='csi -wq'
+alias ctags='ctags --fields=+iaS --extra=+fq'
+alias curl='curl -A "Mozilla/4.0"'
+alias date='date +"%a, %b %e %Y  %R %Z"'
+alias df='df -h'
+alias diff='diff --color=auto'
+alias diffu='diff --color=auto -u'
+alias dmesg="dmesg -H"
+alias du='du -h'
+alias feh='feh --scale-down'
+alias ffmpeg='ffmpeg -hide_banner'
+alias ffplay='ffplay -hide_banner'
+alias ffprobe='ffprobe -hide_banner'
+alias findd='find . -type d -name'
+alias findf='find . -type f -name'
+alias free='free -m'
+alias gdb='gdb -q'
+alias gi=git
+alias gitc=git
+alias grep='grep -n --color=auto'
+alias grepi='grep -i -n --color=auto'
+alias grev='grep -vn --color=auto'
+alias lolcat='lolcat -v .85'
+alias lynx='lynx -use_mouse'
+alias mplayer='mplayer -af scaletempo'
+alias mv='mv -i'
+alias niceme='renice -n 10 -p $$'
+alias nl='nl -ba'
+alias pd=pushd
+alias perld='perl -de0'
+alias pgrep='pgrep -l'
+alias pseudo=sudo
+alias pwd='pwd -P'
+alias rl=readlink
+alias rm='rm -i'
+alias topu="top -u $USER"
+alias vimdiff='vim -d'
+alias which="which -p"
+
+
+#
+# OS-specific
+#
+case $OSTYPE in
+    darwin*)
+        alias l='ls -F --color=yes'
+        alias la='ls -Fa --color=yes'
+        alias ll='ls -Flh --color=yes'
+        alias lla='ls -Flha --color=yes'
+        alias lld='ls -Flhd --color=yes'
+        alias ls='ls -F --color=yes'
+        alias lsd='ls -Fd --color=yes'
+        alias ltr='ls -Fltr --color=yes'
+        ;;
+    linux*|*)
+        alias l='ls --color=auto -F'
+        alias la='ls --color=auto -Fa'
+        alias ll='ls --color=auto -Flh'
+        alias lla='ls --color=auto -Flha'
+        alias lld='ls --color=auto -Flhd'
+        alias ls='ls --color=auto -F'
+        alias lsd='ls --color=auto -Fd'
+        alias lsq='ls --quoting-style=shell-escape'
+        alias lt='ls --color=auto --full-time -Ft'
+        alias ltr='ls --color=auto -Fltr'
+        ;;
+esac
+
+#
+# because I can't spell...
+#
+alias cdx=cd
+alias cs=cd
+alias ecoh=echo
+alias ehco=echo
+alias fiel=file
+alias gitlog='git log'
+alias got=git
 alias gerp=grep
 alias grpe=grep
-alias hbu=hub
+alias gti=git
+alias igt=git
+alias ivm=vim
+alias jods=jobs
 alias les=less
 alias lss=less
+alias maek=make
+alias mak=make
 alias mor=more
+alias mplayre=mplayer
 alias mroe=more
+alias pgerp='pgrep -l'
+alias pyhton=python
 alias scd=cd
 alias sl=ls
 alias sls=ls
-alias vm=mv
+alias vmi=vim
+alias vm=vim
 alias fiel=file
 alias jorbs=jobs
 alias jbos=jobs
 alias jods=jobs
 
-## lazy aliases
-alias by=exit
-alias bye=exit
-alias cp='cp -i'
-alias dirs='dirs -v'
-alias ftp='ftp -i'
-alias gdb='gdb -silent'
-alias mv='mv -i'
-alias pd=pushd
-alias pwd='pwd -P'
-alias rm='rm -i'
-alias revert=/qa/other/ethan/Menu/RevertAndSnapshot.pl
-
-## GNU options
-if [[ -n "$HAVE_GNU_UTILS" ]]; then
-    alias du='du -h'
-    alias grep='grep -n --color=auto --mmap'
-    alias l='ls -F --color=auto --time-style=locale'
-    alias la='ls -a --color=auto --time-style=locale'
-    alias ll='ls -lFh --color=auto --time-style=locale'
-    alias lla='ls -alFh --color=auto --time-style=locale'
-    alias lld='ls -lFhd --color=auto'
-    alias llt='ls -lFht --color=auto'
-    alias llS='ls -lFhS --color=auto --time-style=locale'
-    alias ls='ls -F --color=auto --time-style=locale'
-    alias lsd='ls -sF --color=auto --time-style=locale'
-    alias lt='ls -Ft --color=auto --full-time'
-    alias lta='ls -aFt --color=auto --full-time'
-    alias lz='ls -lFhZ --color=auto'
-    alias lZ='ls -lFhZ --color=auto'
-    alias nl='nl -ba'
-else
-    alias grep='grep -n'
-    alias l='ls -F'
-    alias la='ls -a'
-    alias ll='ls -lF'
-    alias lla='ls -alF'
-    alias lld='ls -lFd'
-    alias llt='ls -lFdt'
-    alias ls='ls -F'
-    alias lsd='ls -dF'
-    alias lt='ls -Ft'
-    alias lta='ls -aFt'
-fi
-
-## vi commands:
-alias :close="echo Cannot close last window"
-alias :w="echo This isn\'t vim, sucka\!"
-alias :wq='exit'
-alias :q='exit'
-alias :q!='exit'
-alias :x='exit'
-alias :r=cat
+#
+# vi commands
+#
+alias /=ack
+alias :close='echo E444: Cannot close last window'
 alias :e=vim
+alias :ex=vim
+alias :ls=ls
+alias :q!=exit
+alias :q=exit
+alias :qa=exit
+alias :r=cat
+alias :r=less
 alias :split=vim
+alias :w!='echo E503: is not a file or writable device'
+alias :w='echo "E505: is read-only (add ! to override)"'
+alias :wq=exit
+alias :x!=exit
+alias :x=exit
+alias ZQ=exit
+alias ZZ=exit
 
-# vim:set foldenable foldmethod=marker filetype=sh tabstop=4 expandtab:
+#
+# 1337 h4X0r 4L14535
+#
+alias copy='cp -i'
+alias del='rm -i'
+alias deltree='rm -rf'
+alias epoch='strftime %c'
+alias move='mv -i'
+alias screen-r=screen\ -r
+alias screenr=screen\ -r
+alias screern=screen\ -r
+alias epoch='strftime %c'
+alias gcc-defines='gcc -dM -E -x c - </dev/null | sort'
