@@ -114,7 +114,6 @@ alias jods=jobs
 #
 # vi commands
 #
-alias /=ack
 alias :close='echo E444: Cannot close last window'
 alias :e=vim
 alias :ex=vim
