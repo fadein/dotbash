@@ -11,7 +11,7 @@ fi
 
 # Source my modularized dotfiles
 for F in ~/.bash/[0-9][0-9]-*.sh; do
-    source $F
+    [[ -x $F ]] && source $F
 done
 
 # run site-specific stuff in .site-bashrc
@@ -20,8 +20,5 @@ done
 # Disable flow control so that Ctrl-S doesn't lock up the terminal
 stty -ixon
 
-# Launch the SSH agent using my customizations
-# This line works if the directory containing this script is in $PATH
-source ssh-agent-startup.sh
 
 # vim:set foldenable foldmethod=marker filetype=sh tabstop=4 expandtab:
